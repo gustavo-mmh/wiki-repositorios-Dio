@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 📚 GitHub Wiki Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web desenvolvida em React que permite aos usuários buscar e visualizar repositórios do GitHub, organizando-os em uma lista interativa. É uma ferramenta útil para quem deseja acompanhar projetos específicos ou criar uma "wiki" pessoal de repositórios.
 
-## Available Scripts
+## ✨ Funcionalidades
 
-In the project directory, you can run:
+  * **Busca de Repositórios:** 🔎 Permite buscar repositórios do GitHub por nome de usuário/organização e nome do repositório.
+  * **Listagem Dinâmica:** Exibe os repositórios encontrados em uma lista, incluindo informações relevantes como nome, descrição e link.
+  * **Remoção de Repositórios:** Possibilidade de remover repositórios da lista exibida.
+  * **Componentes Reutilizáveis:** Construído com uma arquitetura de componentes reutilizáveis para entrada de dados (Input), botões (Button) e exibição de itens de repositório (ItemRepo).
+  * **Integração com API GitHub:** Utiliza a API do GitHub para buscar dados de repositórios.
+  * **Estilização com Styled-components:** Design modular e responsivo com uso de CSS-in-JS.
 
-### `npm start`
+## 🛠️ Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O projeto foi construído com as seguintes tecnologias principais:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  * **React:** Biblioteca JavaScript para construir interfaces de usuário.
+  * **Styled-components:** Para estilização de componentes com CSS-in-JS.
+  * **Axios:** Cliente HTTP baseado em promessas para fazer requisições à API do GitHub.
+  * **HTML & CSS:** Estrutura e estilização básica.
+  * **JavaScript (ES6+):** Lógica da aplicação.
 
-### `npm test`
+## 📂 Estrutura do Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A seguir, a estrutura principal do projeto:
 
-### `npm run build`
+```
+├── public/                     # Arquivos públicos (HTML, ícones, manifest) 🌐
+│   ├── favicon.ico
+│   ├── index.html              # Arquivo HTML principal da aplicação
+│   ├── logo192.png             # Ícone do aplicativo
+│   ├── logo512.png             # Ícone do aplicativo
+│   └── manifest.json           # Manifest da Progressive Web App (PWA)
+├── src/                        # Código-fonte da aplicação 💻
+│   ├── assets/                 # Imagens (ex: logo do GitHub) 🖼️
+│   ├── components/             # Componentes reutilizáveis (Button, Input, ItemRepo) 🧩
+│   │   ├── Button/
+│   │   ├── Input/
+│   │   └── ItemRepo/
+│   ├── pages/                  # Páginas da aplicação (ex: App principal) 📄
+│   ├── services/               # Configurações de API (ex: axios para GitHub) ⚙️
+│   └── styles/                 # Estilos globais da aplicação 🎨
+├── package.json                # Gerenciamento de dependências e scripts 📦
+├── yarn.lock                   # Bloqueio de versões de dependências 🔒
+└── README.md                   # Documentação do projeto 📖
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Como Começar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Siga estas instruções para obter uma cópia do projeto em execução em sua máquina local.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📋 Pré-requisitos
 
-### `npm run eject`
+Certifique-se de ter o Node.js e o Yarn (ou npm) instalados em sua máquina.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### ⬇️ Instalação
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  **Clone o repositório:**
+    ```bash
+    git clone <URL_DO_SEU_REPOSITORIO>
+    cd desafio0-github-wiki-dio
+    ```
+2.  **Instale as dependências:**
+    Usando Yarn:
+    ```bash
+    yarn install
+    ```
+    Ou usando npm:
+    ```bash
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### ▶️ Executando a Aplicação
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para iniciar o servidor de desenvolvimento:
 
-## Learn More
+```bash
+yarn start
+# ou
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Isso abrirá o aplicativo em seu navegador padrão em `http://localhost:3000`. A página será automaticamente recarregada conforme você fizer alterações no código.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📜 Scripts Disponíveis
 
-### Code Splitting
+No diretório do projeto, você pode executar:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  * **`npm start`**: Inicia o aplicativo em modo de desenvolvimento.
+  * **`npm test`**: Inicia o executor de testes em modo de observação interativo.
+  * **`npm run build`**: Compila o aplicativo para produção na pasta `build`.
+  * **`npm run eject`**: Remove a única dependência de build do seu projeto. **Use com cautela, é uma operação irreversível\!**
 
-### Analyzing the Bundle Size
+## 🤝 Contribuição
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contribuições são bem-vindas\! Sinta-se à vontade para abrir issues ou pull requests para melhorias.
 
-### Making a Progressive Web App
+## 📝 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto é de código aberto e está disponível sob a licença padrão da plataforma.
